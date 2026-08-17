@@ -22,82 +22,55 @@ export default function Logo({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <defs>
-        <linearGradient
-          id="dakiCircleGradient"
-          x1="15"
-          y1="15"
-          x2="85"
-          y2="85"
-        >
-          <stop offset="0%" stopColor="#0b214d" />
-          <stop offset="70%" stopColor="#0b214d" />
-          <stop offset="100%" stopColor="#4f46e5" />
-        </linearGradient>
-
-        <linearGradient
-          id="dakiBlueAccent"
-          x1="35"
-          y1="70"
-          x2="65"
-          y2="40"
-        >
-          <stop offset="0%" stopColor="#2563eb" />
-          <stop offset="100%" stopColor="#4f46e5" />
-        </linearGradient>
-      </defs>
-
-      {/* White circular background */}
+      {/* White background */}
       <circle
         cx="50"
         cy="50"
-        r="46"
+        r="47"
         fill="white"
       />
 
-      {/* COMPLETE CIRCLE */}
+      {/* Complete circular border */}
       <circle
         cx="50"
         cy="50"
         r="43"
-        stroke="url(#dakiCircleGradient)"
+        stroke="#0b214d"
         strokeWidth="4"
       />
 
-      {/* Stylized D */}
+      {/* Simple geometric D */}
       <path
-        d="M30 30V70"
+        d="M31 28V72"
         stroke="#0b214d"
-        strokeWidth="8"
+        strokeWidth="9"
         strokeLinecap="round"
       />
 
       <path
-        d="M30 30H47C60 30 69 38 69 50C69 62 60 70 47 70H30"
+        d="M31 28H48C63 28 72 37 72 50C72 63 63 72 48 72H31"
         stroke="#0b214d"
-        strokeWidth="8"
+        strokeWidth="9"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* Blue AI accent */}
+      {/* Small gold sparkle above the D */}
       <path
-        d="M38 62L47 48L55 59"
-        stroke="url(#dakiBlueAccent)"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      {/* Small orange sparkle */}
-      <path
-        d="M62 20L64 25L69 27L64 29L62 34L60 29L55 27L60 25L62 20Z"
+        d="M66 18L68 23L73 25L68 27L66 32L64 27L59 25L64 23L66 18Z"
         fill="#f5a900"
+      />
+
+      {/* Small blue accent dot */}
+      <circle
+        cx="76"
+        cy="69"
+        r="3"
+        fill="#4f46e5"
       />
     </svg>
   );
 
-  /* Icon-only version */
   if (variant === 'icon' || !showText) {
     return (
       <div className={className}>
@@ -106,7 +79,6 @@ export default function Logo({
     );
   }
 
-  /* Full Daki.ai logo */
   return (
     <div
       className={`flex items-center gap-4 whitespace-nowrap ${className} ${
@@ -128,7 +100,6 @@ export default function Logo({
         >
           Daki
         </span>
-
         <span
           className="text-[#4f46e5]"
           style={{ textTransform: 'none' }}
