@@ -254,7 +254,7 @@ export default function App() {
                 Practical Business Analytics, Not Textbook Theory
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed font-sans">
-                At DAKI Institute, we train students from beginner to job-ready level using actual corporate datasets, production-grade dashboards, SQL query pipelines, AI tools, and systematic interview prep templates.
+                At DAKI AI, we train students from beginner to job-ready level using actual corporate datasets, production-grade dashboards, SQL query pipelines, AI tools, and systematic interview prep templates.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed font-sans">
                 Our core mission is to replace standard textbook lectures with rigorous practical workflows. Instead of copying formulas, you will solve actual operational problems and build professional portfolios recruiters notice.
@@ -555,7 +555,7 @@ export default function App() {
               Daki Advantage
             </span>
             <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-indigo-950 tracking-tight">
-              Why Choose Daki Institute?
+              Why Choose DAKI AI?
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 font-sans max-w-md mx-auto">
               Our structured weekend training pipelines combine expert technical logic with premium career guidance.
@@ -764,7 +764,7 @@ export default function App() {
           <div className="space-y-4">
             <Logo variant="full" theme="dark" className="h-14 w-auto" />
             <p className="text-[11px] text-slate-500 font-sans leading-relaxed max-w-xs">
-              Daki Institute: Guide path for Business Intelligence, SQL analytics, advanced spreadsheet automations, and LLM-powered business integration systems.
+              DAKI AI: Guide path for Business Intelligence, SQL analytics, advanced spreadsheet automations, and LLM-powered business integration systems.
             </p>
           </div>
 
@@ -846,7 +846,7 @@ export default function App() {
 
         {/* Copy lines */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-[10px] text-slate-600 font-sans flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span>© 2026 Daki Institute. All rights reserved. Registered in Bengaluru, Karnataka.</span>
+          <span>© 2026 DAKI AI. All rights reserved. Registered in Bengaluru, Karnataka.</span>
           <span>Designed with high-precision analytical fidelity.</span>
         </div>
       </footer>
