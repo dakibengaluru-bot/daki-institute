@@ -156,7 +156,7 @@ export default function Logo({
           letterSpacing="8"
           textAnchor="middle"
         >
-          Ai
+          AI
         </text>
 
         {/* Right line */}
