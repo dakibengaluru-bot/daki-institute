@@ -24,68 +24,48 @@ export default function Logo({
       aria-label="Daki.ai logo"
     >
       <defs>
-        {/* Main orbit gradient */}
+        {/* Main navy to violet gradient */}
         <linearGradient
-          id="dakiOrbit"
-          x1="15"
-          y1="15"
-          x2="105"
-          y2="105"
+          id="dakiMain"
+          x1="18"
+          y1="18"
+          x2="102"
+          y2="102"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0%" stopColor="#071a3d" />
-          <stop offset="48%" stopColor="#123b78" />
-          <stop offset="75%" stopColor="#2563eb" />
-          <stop offset="100%" stopColor="#6d4aff" />
+          <stop offset="0%" stopColor="#071A3D" />
+          <stop offset="55%" stopColor="#123B78" />
+          <stop offset="100%" stopColor="#4F46E5" />
         </linearGradient>
 
-        {/* Main D gradient */}
+        {/* Data blue gradient */}
         <linearGradient
-          id="dakiDGradient"
-          x1="38"
-          y1="30"
-          x2="88"
-          y2="92"
+          id="dakiData"
+          x1="30"
+          y1="90"
+          x2="92"
+          y2="35"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0%" stopColor="#071a3d" />
-          <stop offset="55%" stopColor="#102d61" />
-          <stop offset="100%" stopColor="#2563eb" />
+          <stop offset="0%" stopColor="#06B6D4" />
+          <stop offset="50%" stopColor="#2563EB" />
+          <stop offset="100%" stopColor="#6366F1" />
         </linearGradient>
 
-        {/* Digital ribbon */}
+        {/* Gold AI gradient */}
         <linearGradient
-          id="dakiRibbon"
-          x1="35"
-          y1="85"
-          x2="94"
-          y2="42"
+          id="dakiGold"
+          x1="70"
+          y1="20"
+          x2="90"
+          y2="40"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0%" stopColor="#08a9d6" />
-          <stop offset="45%" stopColor="#2563eb" />
-          <stop offset="100%" stopColor="#7148ff" />
+          <stop offset="0%" stopColor="#FFD34E" />
+          <stop offset="100%" stopColor="#F59E0B" />
         </linearGradient>
 
-        {/* Soft blue glow */}
-        <filter
-          id="dakiGlow"
-          x="-50%"
-          y="-50%"
-          width="200%"
-          height="200%"
-        >
-          <feGaussianBlur
-            stdDeviation="2.5"
-            result="blur"
-          />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-
-        {/* Shadow */}
+        {/* Soft shadow */}
         <filter
           id="dakiShadow"
           x="-30%"
@@ -97,7 +77,7 @@ export default function Logo({
             dx="0"
             dy="2"
             stdDeviation="2"
-            floodColor="#071a3d"
+            floodColor="#071A3D"
             floodOpacity="0.18"
           />
         </filter>
@@ -111,145 +91,207 @@ export default function Logo({
         fill="white"
       />
 
-      {/* Complete outer orbit */}
+      {/* Complete outer circle */}
       <circle
         cx="60"
         cy="60"
-        r="50"
-        stroke="url(#dakiOrbit)"
+        r="49"
+        stroke="url(#dakiMain)"
         strokeWidth="4"
       />
 
-      {/* Small secondary orbit accent */}
-      <path
-        d="M22 42C29 23 47 11 68 11C89 11 106 24 113 43"
-        stroke="#4f46e5"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        opacity="0.5"
+      {/* Inner subtle orbit */}
+      <circle
+        cx="60"
+        cy="60"
+        r="42"
+        stroke="#2563EB"
+        strokeWidth="1"
+        opacity="0.18"
       />
 
-      {/* Main futuristic D */}
+      {/* ========================= */}
+      {/* DATA-BASED D MONOGRAM     */}
+      {/* ========================= */}
 
-      {/* Vertical spine */}
+      {/* Vertical spine of D */}
       <path
-        d="M37 31V88"
-        stroke="url(#dakiDGradient)"
-        strokeWidth="10"
-        strokeLinecap="round"
-      />
-
-      {/* Upper D arm */}
-      <path
-        d="M38 31H61"
-        stroke="url(#dakiDGradient)"
-        strokeWidth="10"
+        d="M34 32V87"
+        stroke="#071A3D"
+        strokeWidth="9"
         strokeLinecap="round"
       />
 
-      {/* Outer D curve */}
+      {/* Top D connection */}
       <path
-        d="M61 31C78 31 88 42 88 59.5C88 77 78 88 61 88H38"
-        stroke="url(#dakiDGradient)"
-        strokeWidth="10"
+        d="M35 32H57"
+        stroke="#071A3D"
+        strokeWidth="9"
+        strokeLinecap="round"
+      />
+
+      {/* D outer curve */}
+      <path
+        d="M57 32C74 32 84 42 84 59.5C84 77 74 87 57 87H35"
+        stroke="#071A3D"
+        strokeWidth="9"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* Futuristic cut-out inside D */}
+      {/* ========================= */}
+      {/* DATA VISUALIZATION INSIDE */}
+      {/* ========================= */}
+
+      {/* Rising analytics line */}
       <path
-        d="M58 43C67 43 73 49 73 59.5C73 70 67 76 58 76"
-        stroke="white"
-        strokeWidth="5"
+        d="M39 76L48 68L55 72L65 56L73 61L82 45"
+        stroke="url(#dakiData)"
+        strokeWidth="4"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
-      {/* Digital flowing ribbon across lower D */}
-      <path
-        d="M38 79C48 87 62 89 75 82C83 78 88 71 91 63"
-        stroke="url(#dakiRibbon)"
-        strokeWidth="5"
-        strokeLinecap="round"
-        filter="url(#dakiGlow)"
-      />
-
-      {/* Digital data nodes */}
-
+      {/* Data nodes */}
       <circle
-        cx="29"
-        cy="46"
-        r="4"
-        fill="#2563eb"
-      />
-
-      <circle
-        cx="29"
-        cy="58"
+        cx="39"
+        cy="76"
         r="3"
-        fill="#4f46e5"
+        fill="#06B6D4"
       />
 
       <circle
-        cx="29"
-        cy="69"
-        r="2.5"
-        fill="#08a9d6"
+        cx="48"
+        cy="68"
+        r="3"
+        fill="#2563EB"
       />
 
-      {/* Connecting digital line */}
+      <circle
+        cx="55"
+        cy="72"
+        r="3"
+        fill="#2563EB"
+      />
+
+      <circle
+        cx="65"
+        cy="56"
+        r="3"
+        fill="#4F46E5"
+      />
+
+      <circle
+        cx="73"
+        cy="61"
+        r="3"
+        fill="#4F46E5"
+      />
+
+      <circle
+        cx="82"
+        cy="45"
+        r="3.5"
+        fill="#6366F1"
+      />
+
+      {/* Small connecting data lines */}
       <path
-        d="M29 46V69"
-        stroke="#2563eb"
+        d="M39 76L39 84"
+        stroke="#06B6D4"
         strokeWidth="1.5"
-        strokeDasharray="2 3"
-        opacity="0.7"
+        opacity="0.6"
       />
 
-      {/* Gold AI sparkle */}
+      <path
+        d="M48 68L48 82"
+        stroke="#2563EB"
+        strokeWidth="1.5"
+        opacity="0.45"
+      />
+
+      <path
+        d="M65 56L65 45"
+        stroke="#4F46E5"
+        strokeWidth="1.5"
+        opacity="0.4"
+      />
+
+      {/* ========================= */}
+      {/* AI SPARK                   */}
+      {/* ========================= */}
+
       <g filter="url(#dakiShadow)">
         <path
-          d="M88 23
-             L91 30
-             L98 33
-             L91 36
-             L88 43
-             L85 36
-             L78 33
-             L85 30
-             Z"
-          fill="#f5a900"
+          d="
+            M91 20
+            L94 27
+            L101 30
+            L94 33
+            L91 40
+            L88 33
+            L81 30
+            L88 27
+            Z
+          "
+          fill="url(#dakiGold)"
         />
 
         <circle
-          cx="88"
-          cy="33"
+          cx="91"
+          cy="30"
           r="2"
-          fill="#fff4c2"
+          fill="#FFF7D6"
         />
       </g>
 
-      {/* Tiny orbit nodes */}
+      {/* ========================= */}
+      {/* DIGITAL PIXELS             */}
+      {/* ========================= */}
+
+      <rect
+        x="22"
+        y="45"
+        width="5"
+        height="5"
+        rx="1"
+        fill="#06B6D4"
+      />
+
+      <rect
+        x="22"
+        y="54"
+        width="4"
+        height="4"
+        rx="1"
+        fill="#2563EB"
+      />
+
+      <rect
+        x="22"
+        y="62"
+        width="3"
+        height="3"
+        rx="1"
+        fill="#4F46E5"
+      />
+
+      {/* ========================= */}
+      {/* SMALL ORBIT POINTS         */}
+      {/* ========================= */}
+
       <circle
-        cx="104"
-        cy="79"
+        cx="103"
+        cy="72"
         r="2.5"
-        fill="#4f46e5"
+        fill="#4F46E5"
       />
 
       <circle
-        cx="24"
-        cy="83"
+        cx="27"
+        cy="86"
         r="2"
-        fill="#08a9d6"
-      />
-
-      {/* Bottom blue accent */}
-      <path
-        d="M43 98C50 101 58 102 66 101"
-        stroke="#2563eb"
-        strokeWidth="2"
-        strokeLinecap="round"
-        opacity="0.7"
+        fill="#06B6D4"
       />
     </svg>
   );
@@ -267,7 +309,7 @@ export default function Logo({
   return (
     <div
       className={`flex items-center gap-4 whitespace-nowrap ${className} ${
-        isDark ? 'text-white' : 'text-[#0b214d]'
+        isDark ? 'text-white' : 'text-[#071A3D]'
       }`}
     >
       <LogoIcon />
@@ -280,14 +322,14 @@ export default function Logo({
         }}
       >
         <span
-          className="text-[#0b214d]"
+          className="text-[#071A3D]"
           style={{ textTransform: 'none' }}
         >
           Daki
         </span>
 
         <span
-          className="text-[#4f46e5]"
+          className="text-[#4F46E5]"
           style={{ textTransform: 'none' }}
         >
           .ai
