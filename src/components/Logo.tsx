@@ -83,12 +83,25 @@ export default function Logo({
       <LogoIcon />
 
       <span
-        className="text-4xl font-bold tracking-tight leading-none"
-        style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
-      >
-        <span className="text-[#0b214d]">Daki</span>
-        <span className="text-[#4f46e5]">.ai</span>
-      </span>
+  className="text-4xl font-bold tracking-tight leading-none"
+  style={{
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    textTransform: 'none',
+  }}
+>
+  <span
+    className="text-[#0b214d]"
+    style={{ textTransform: 'none' }}
+  >
+    Daki
+  </span>
+  <span
+    className="text-[#4f46e5]"
+    style={{ textTransform: 'none' }}
+  >
+    .ai
+  </span>
+</span>
     </div>
   );
 }
