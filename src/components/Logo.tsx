@@ -8,121 +8,86 @@ interface LogoProps {
 }
 
 export default function Logo({
-  className = 'h-12 w-12',
+  className = 'h-12 w-auto',
   variant = 'full',
   showText = true,
   theme = 'light',
 }: LogoProps) {
   const isDark = theme === 'dark';
 
+  const LogoIcon = () => (
+    <svg
+      viewBox="0 0 100 100"
+      className="h-12 w-12 shrink-0"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        r="44"
+        fill="white"
+        stroke="#0b214d"
+        strokeWidth="4"
+      />
+
+      {/* Stylized A */}
+      <path
+        d="M27 68L43 30L50 47L57 30L73 68"
+        stroke="#0b214d"
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Gold accent */}
+      <path
+        d="M50 47L57 30"
+        stroke="#f5a900"
+        strokeWidth="7"
+        strokeLinecap="round"
+      />
+
+      {/* Cyan accent */}
+      <path
+        d="M39 59H61"
+        stroke="#00a8c7"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+
+      {/* Accent dot */}
+      <circle
+        cx="50"
+        cy="20"
+        r="3"
+        fill="#f5a900"
+      />
+    </svg>
+  );
+
   if (variant === 'icon' || !showText) {
     return (
-      <svg
-        viewBox="0 0 100 100"
-        className={`${className} select-none`}
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="dakiLogoGradient" x1="10" y1="10" x2="90" y2="90">
-            <stop offset="0%" stopColor="#0b214d" />
-            <stop offset="55%" stopColor="#0b214d" />
-            <stop offset="100%" stopColor="#00a8c7" />
-          </linearGradient>
-        </defs>
-
-        <circle
-          cx="50"
-          cy="50"
-          r="44"
-          fill="white"
-          stroke="url(#dakiLogoGradient)"
-          strokeWidth="4"
-        />
-
-        <path
-          d="M24 66L42 29L50 45L58 29L76 66"
-          stroke="#0b214d"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="M50 45L58 29"
-          stroke="#f5a900"
-          strokeWidth="7"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M39 58H61"
-          stroke="#00a8c7"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-
-        <circle cx="50" cy="20" r="3" fill="#f5a900" />
-      </svg>
+      <div className={className}>
+        <LogoIcon />
+      </div>
     );
   }
 
   return (
     <div
-      className={`flex items-center gap-3 whitespace-nowrap ${
+      className={`flex items-center gap-4 whitespace-nowrap ${className} ${
         isDark ? 'text-white' : 'text-[#0b214d]'
-      } ${className}`}
+      }`}
     >
-      <svg
-        viewBox="0 0 100 100"
-        className="h-12 w-12 shrink-0 select-none"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <LogoIcon />
+
+      <span
+        className="text-4xl font-bold tracking-tight leading-none"
+        style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
       >
-        <defs>
-          <linearGradient id="dakiFullGradient" x1="10" y1="10" x2="90" y2="90">
-            <stop offset="0%" stopColor="#0b214d" />
-            <stop offset="55%" stopColor="#0b214d" />
-            <stop offset="100%" stopColor="#00a8c7" />
-          </linearGradient>
-        </defs>
-
-        <circle
-          cx="50"
-          cy="50"
-          r="44"
-          fill="white"
-          stroke="url(#dakiFullGradient)"
-          strokeWidth="4"
-        />
-
-        <path
-          d="M24 66L42 29L50 45L58 29L76 66"
-          stroke="#0b214d"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="M50 45L58 29"
-          stroke="#f5a900"
-          strokeWidth="7"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M39 58H61"
-          stroke="#00a8c7"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-
-        <circle cx="50" cy="20" r="3" fill="#f5a900" />
-      </svg>
-
-      <span className="font-bold tracking-tight text-3xl leading-none">
-        DAKI <span className="text-[#4f46e5]">AI</span>
+        <span className="text-[#0b214d]">Daki</span>
+        <span className="text-[#4f46e5]">.ai</span>
       </span>
     </div>
   );
