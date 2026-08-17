@@ -21,8 +21,39 @@ export default function Logo({
       className="h-12 w-12 shrink-0"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-label="Daki.ai logo"
     >
-      {/* White background */}
+      <defs>
+        {/* Navy → blue → violet circular gradient */}
+        <linearGradient
+          id="dakiLogoRing"
+          x1="15"
+          y1="15"
+          x2="88"
+          y2="88"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#0b214d" />
+          <stop offset="55%" stopColor="#0b214d" />
+          <stop offset="82%" stopColor="#2563eb" />
+          <stop offset="100%" stopColor="#4f46e5" />
+        </linearGradient>
+
+        {/* Blue-violet D accent */}
+        <linearGradient
+          id="dakiDAccent"
+          x1="32"
+          y1="72"
+          x2="72"
+          y2="35"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stopColor="#2563eb" />
+          <stop offset="100%" stopColor="#4f46e5" />
+        </linearGradient>
+      </defs>
+
+      {/* White circular background */}
       <circle
         cx="50"
         cy="50"
@@ -30,47 +61,83 @@ export default function Logo({
         fill="white"
       />
 
-      {/* Complete circular border */}
+      {/* Complete outer ring */}
       <circle
         cx="50"
         cy="50"
         r="43"
-        stroke="#0b214d"
+        stroke="url(#dakiLogoRing)"
         strokeWidth="4"
       />
 
-      {/* Simple geometric D */}
+      {/* Main stylized D */}
       <path
-        d="M31 28V72"
+        d="M32 30V70"
         stroke="#0b214d"
-        strokeWidth="9"
+        strokeWidth="8"
         strokeLinecap="round"
       />
 
       <path
-        d="M31 28H48C63 28 72 37 72 50C72 63 63 72 48 72H31"
+        d="M32 30H48"
         stroke="#0b214d"
-        strokeWidth="9"
+        strokeWidth="8"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M48 30C61 30 69 38 69 50C69 62 61 70 48 70H32"
+        stroke="#0b214d"
+        strokeWidth="8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* Small gold sparkle above the D */}
+      {/* Blue/violet lower sweep */}
       <path
-        d="M66 18L68 23L73 25L68 27L66 32L64 27L59 25L64 23L66 18Z"
-        fill="#f5a900"
+        d="M34 69H49C58 69 65 65 69 58"
+        stroke="url(#dakiDAccent)"
+        strokeWidth="5"
+        strokeLinecap="round"
       />
 
-      {/* Small blue accent dot */}
-      <circle
-        cx="76"
-        cy="69"
-        r="3"
-        fill="#4f46e5"
+      {/* Digital pixels */}
+      <rect
+        x="24"
+        y="45"
+        width="7"
+        height="7"
+        rx="1"
+        fill="#2563eb"
+      />
+
+      <rect
+        x="30"
+        y="53"
+        width="7"
+        height="7"
+        rx="1"
+        fill="#2563eb"
+      />
+
+      <rect
+        x="36"
+        y="61"
+        width="7"
+        height="7"
+        rx="1"
+        fill="#0b214d"
+      />
+
+      {/* Gold sparkle */}
+      <path
+        d="M69 20L71 25L76 27L71 29L69 34L67 29L62 27L67 25L69 20Z"
+        fill="#f5a900"
       />
     </svg>
   );
 
+  /* ICON ONLY */
   if (variant === 'icon' || !showText) {
     return (
       <div className={className}>
@@ -79,6 +146,7 @@ export default function Logo({
     );
   }
 
+  /* FULL Daki.ai LOGO */
   return (
     <div
       className={`flex items-center gap-4 whitespace-nowrap ${className} ${
@@ -100,6 +168,7 @@ export default function Logo({
         >
           Daki
         </span>
+
         <span
           className="text-[#4f46e5]"
           style={{ textTransform: 'none' }}
