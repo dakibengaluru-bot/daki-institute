@@ -1,6 +1,6 @@
 {
-  "name": "Daki Institute",
-  "description": "Official website for Daki Institute, guiding students on Power BI, SQL, Excel, Python, and AI tools with interactive dashboards and enrollment.",
+  "name": "DAKI Ai",
+  "description": "Official website for DAKI Ai, guiding students on Power BI, SQL, Excel, Python, and AI tools with interactive dashboards and enrollment.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
