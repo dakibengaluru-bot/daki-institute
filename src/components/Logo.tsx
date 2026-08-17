@@ -44,20 +44,24 @@ export default function Logo({
       <LogoIcon />
 
       <span
-        className="text-4xl font-bold tracking-tight leading-none"
-        style={{
-          fontFamily: 'Arial, Helvetica, sans-serif',
-          textTransform: 'none',
-        }}
-      >
-        <span className="text-[#071A3D]">
-          Daki
-        </span>
+  className="text-4xl font-bold tracking-tight leading-none"
+  style={{
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    textTransform: 'none',
+  }}
+>
+  <span
+    className={isDark ? 'text-white' : 'text-[#071A3D]'}
+  >
+    Daki
+  </span>
 
-        <span className="text-[#4F46E5]">
-          .ai
-        </span>
-      </span>
+  <span
+    className={isDark ? 'text-[#A5B4FC]' : 'text-[#4F46E5]'}
+  >
+    .ai
+  </span>
+</span>
     </div>
   );
 }
