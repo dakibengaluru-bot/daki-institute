@@ -13,7 +13,7 @@ import {
   Mail, 
   MapPin, 
   Instagram, 
-  Youtube, 
+  Facebook, 
   Linkedin, 
   ChevronDown, 
   ArrowRight, 
@@ -813,13 +813,13 @@ export default function App() {
                   <Instagram className="h-4 w-4" />
                 </a>
                 <a 
-                  href="https://youtube.com" 
+                  href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-slate-950 border border-slate-800 p-2.5 rounded-xl hover:text-indigo-400 hover:border-indigo-400/50 transition-all text-slate-300"
-                  title="Subscribe to Daki on YouTube"
+                  title="Subscribe to Daki on Facebook"
                 >
-                  <Youtube className="h-4 w-4" />
+                  <Facebook className="h-4 w-4" />
                 </a>
                 <a 
                   href="https://linkedin.com/company/daki-institute/" 
