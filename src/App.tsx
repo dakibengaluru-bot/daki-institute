@@ -821,12 +821,6 @@ export default function App() {
                 >
                   <Facebook className="h-4 w-4" />
                 </a>
-                <div  
-                    className="bg-slate-950 border border-slate-800 p-2.5 rounded-xl"
-                  title="LinkedIn coming soon"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
               </div>
             </div>
 
