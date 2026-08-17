@@ -43,7 +43,7 @@ export default function Logo({
     >
       <LogoIcon />
 
-      <span
+     <span
   className="text-4xl font-bold tracking-tight leading-none"
   style={{
     fontFamily: 'Arial, Helvetica, sans-serif',
@@ -61,7 +61,7 @@ export default function Logo({
   >
     .ai
   </span>
-</span>
+</span></span>
     </div>
   );
 }
