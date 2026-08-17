@@ -156,7 +156,7 @@ export default function Logo({
           letterSpacing="8"
           textAnchor="middle"
         >
-          INSTITUTE
+          Ai
         </text>
 
         {/* Right line */}
@@ -197,7 +197,7 @@ export default function Logo({
           <span className={`font-sans font-semibold text-xs tracking-[0.25em] uppercase leading-none mt-1 ${
             isDark ? 'text-indigo-400' : 'text-indigo-600'
           }`}>
-            INSTITUTE
+            Ai
           </span>
         </div>
       )}
