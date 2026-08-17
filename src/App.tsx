@@ -804,7 +804,7 @@ export default function App() {
               <h5 className="font-display font-bold text-white text-xs uppercase tracking-wider">Follow Us On Socials</h5>
               <div className="flex items-center gap-3">
                 <a 
-                  href="https://instagram.com/daki.institute" 
+                  href="https://www.instagram.com/daki.institute/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-slate-950 border border-slate-800 p-2.5 rounded-xl hover:text-indigo-400 hover:border-indigo-400/50 transition-all text-slate-300"
