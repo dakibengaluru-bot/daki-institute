@@ -150,7 +150,7 @@ export default function Logo({
           x="200"
           y="238"
           fill="#0b214d"
-          fontSize="26"
+          fontSize="34"
           fontFamily="system-ui, -apple-system, sans-serif"
           fontWeight="bold"
           letterSpacing="8"
