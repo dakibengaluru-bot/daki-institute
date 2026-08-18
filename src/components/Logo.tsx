@@ -16,16 +16,14 @@ export default function Logo({
 }: LogoProps) {
   const isDark = theme === 'dark';
 
-  // Daki.ai AI/Data logo
   const LogoIcon = () => (
     <img
       src={dakiAiLogo}
-      alt="Daki.ai logo"
+      alt="Daki.ai"
       className="h-14 w-14 shrink-0 object-contain"
     />
   );
 
-  // Icon-only version
   if (variant === 'icon' || !showText) {
     return (
       <div className={className}>
@@ -34,34 +32,26 @@ export default function Logo({
     );
   }
 
-  // Full Daki.ai branding
   return (
     <div
-      className={`flex items-center gap-4 whitespace-nowrap ${className} ${
-        isDark ? 'text-white' : 'text-[#071A3D]'
-      }`}
+      className={`flex items-center gap-4 whitespace-nowrap ${className}`}
     >
       <LogoIcon />
 
-     <span
-  className="text-4xl font-bold tracking-tight leading-none"
-  style={{
-    fontFamily: 'Arial, Helvetica, sans-serif',
-    textTransform: 'none',
-  }}
->
-  <span
-    className={isDark ? 'text-white' : 'text-[#071A3D]'}
-  >
-    Daki
-  </span>
+      <span
+        className="text-4xl font-bold tracking-tight leading-none"
+        style={{
+          fontFamily: 'Arial, Helvetica, sans-serif',
+        }}
+      >
+        <span className={isDark ? 'text-white' : 'text-[#071A3D]'}>
+          Daki
+        </span>
 
-  <span
-    className={isDark ? 'text-[#A5B4FC]' : 'text-[#4F46E5]'}
-  >
-    .ai
-  </span>
-</span></span>
+        <span className={isDark ? 'text-[#A5B4FC]' : 'text-[#4F46E5]'}>
+          .ai
+        </span>
+      </span>
     </div>
   );
 }
