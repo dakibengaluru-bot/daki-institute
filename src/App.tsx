@@ -217,18 +217,22 @@ export default function App() {
               </div>
 
               {/* Card bottom contact info */}
-              <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800/60 flex items-center justify-between text-xs text-slate-400 font-sans">
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-[9px] uppercase font-bold text-indigo-400">
+              <div className="bg-slate-950/80 p-4 sm:p-5 rounded-xl border border-slate-800/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-400 font-sans">
+                <div className="flex flex-col gap-1">
+                  <span className="text-[9px] uppercase font-bold tracking-wide text-indigo-400">
                     Class Format
                   </span>
-                  <span className="text-white text-[11px] font-bold leading-tight">
-                    Online weekdays / Weekends classes available
+                  <span className="text-white text-[11px] sm:text-xs font-bold leading-relaxed">
+                    Online weekdays / Weekends available
                   </span>
                 </div>
-                <div className="flex flex-col text-right gap-0.5">
-                  <span className="text-[9px] uppercase font-bold text-indigo-400">Inquire Now</span>
-                  <span className="text-white text-[11px] font-bold">+91 9353039710</span>
+                <div className="flex flex-col sm:items-end gap-1">
+                  <span className="text-[9px] uppercase font-bold tracking-wide text-indigo-400">
+                    Inquire Today
+                  </span>
+                  <span className="text-white text-[11px] sm:text-xs font-bold whitespace-nowrap">
+                    +91 9353039710
+                  </span>
                 </div>
               </div>
 
