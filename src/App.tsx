@@ -773,7 +773,6 @@ export default function App() {
             <ul className="space-y-2 text-xs font-medium">
               <li><a href="#about" className="hover:text-indigo-400 transition-colors">About Us</a></li>
               <li><a href="#courses" className="hover:text-indigo-400 transition-colors">Our Courses</a></li>
-              <li><a href="#analytics-lab" className="hover:text-indigo-400 transition-colors">Practice Lab</a></li>
               <li><a href="#courses" className="hover:text-indigo-400 transition-colors">Career Support</a></li>
               <li><a href="#courses" className="hover:text-indigo-400 transition-colors">Government School Program</a></li>
             </ul>
