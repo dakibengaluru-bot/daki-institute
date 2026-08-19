@@ -91,7 +91,6 @@ export default function App() {
             <a href="#about" className="hover:text-indigo-600 transition-colors">About</a>
             <a href="#courses" className="hover:text-indigo-600 transition-colors">Courses</a>
             <a href="#highlights" className="hover:text-indigo-600 transition-colors">Why Us</a>
-            <a href="#analytics-lab" className="hover:text-indigo-600 transition-colors">Practice Lab</a>
             <a href="#faqs" className="hover:text-indigo-600 transition-colors border-r border-slate-200 pr-8">FAQs</a>
           </nav>
 
