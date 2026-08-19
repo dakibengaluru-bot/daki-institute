@@ -826,14 +826,7 @@ export default function App() {
 
             {/* Hidden admin lead-portal portal button */}
             <div className="pt-6">
-              <button
-                onClick={() => setShowAdminPortal(true)}
-                className="inline-flex items-center gap-1.5 text-[10px] text-slate-600 hover:text-slate-400 transition-colors cursor-pointer bg-slate-950/40 px-3 py-1.5 rounded-lg border border-slate-900 hover:border-slate-800"
-              >
-                <Lock className="h-3 w-3" />
-                Admin Leads Portal
-              </button>
-            </div>
+             </div>
           </div>
 
         </div>
@@ -841,7 +834,8 @@ export default function App() {
         {/* Copy lines */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-[10px] text-slate-600 font-sans flex flex-col sm:flex-row items-center justify-between gap-4">
           <span>© 2026 DAKI AI. All rights reserved. Registered in Bengaluru, Karnataka.</span>
-          <span>Designed with high-precision analytical fidelity.</span>
+          <span> Built for practical, AI-powered learning. 
+          </span>
         </div>
       </footer>
 
