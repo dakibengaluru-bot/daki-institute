@@ -171,14 +171,6 @@ export default function App() {
                 Enroll Now
                 <ArrowRight className="h-4 w-4 animate-pulse" />
               </button>
-              
-              <a
-                href="#analytics-lab"
-                className="w-full sm:w-auto bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800/80 text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
-              >
-                Explore Interactive Analytics Lab
-                <Terminal className="h-4 w-4 text-indigo-400" />
-              </a>
             </div>
           </div>
 
