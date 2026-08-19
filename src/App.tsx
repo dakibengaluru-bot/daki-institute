@@ -289,7 +289,7 @@ export default function App() {
           
           <div className="text-center space-y-3">
             <span className="inline-block py-1 px-4 bg-indigo-50 text-indigo-700 text-xs font-bold tracking-widest uppercase rounded-full border border-indigo-100">
-              Syllabus Catalogue
+              Courses Offered
             </span>
             <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-indigo-950 tracking-tight">
               Guided Specialized Training Programs
