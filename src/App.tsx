@@ -743,7 +743,7 @@ export default function App() {
                 }}
                 className="bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-xs px-5 py-2.5 rounded-xl transition-colors cursor-pointer font-sans shadow-md shadow-indigo-650/10"
               >
-                Select This Course
+                Enroll in This Course
               </button>
             </div>
           </div>
