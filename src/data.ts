@@ -3,10 +3,10 @@ import { Course, Testimonial } from './types';
 export const COURSES: Course[] = [
   {
     id: 'power-bi',
-    title: 'Power BI Dashboard Development',
-    subtitle: 'From Raw Data to Professional Enterprise BI Dashboards',
-    description: 'Learn the industry-standard BI tool to clean, model, analyze, and publish stunning interactive dashboards. Master DAX formulas and data modeling.',
-    duration: '6 Weeks (Saturdays & Sundays)',
+    title: 'Power BI & Business Intelligence',
+    subtitle: 'Build Professional Dashboards from Real-World Data',
+    description: 'Master Power BI, Power Query, DAX, data modeling, and interactive dashboard development through practical, business-focused projects.',
+    duration: '6 Weeks • Weekend Batches',
     level: 'Beginner to Advanced',
     icon: 'BarChart3',
     skills: ['Data Visualization', 'DAX Queries', 'Data Modeling', 'Power Query', 'AI Integrations', 'Workspace Publishing'],
