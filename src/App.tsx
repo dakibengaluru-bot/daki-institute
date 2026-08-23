@@ -301,12 +301,10 @@ export default function App() {
 
           {/* Courses Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {COURSES
-              .filter(course => 
-                course.id !== 'kannada-communication' &&
-                course.id !== 'government-school'
-              )
-              .map(course => (
+            {COURSES.map(course => (
+              <div
+                key={course.id}
+                className="bg-white border border-slate-100 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group"
                 <div>
                   {/* Icon Header */}
                   <div className="flex items-center justify-between mb-6">
