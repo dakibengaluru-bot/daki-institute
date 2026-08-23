@@ -312,6 +312,7 @@ export default function App() {
                   className="bg-white border border-slate-100 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group"
                 >
                   <div>
+                    
                   {/* Icon Header */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="h-12 w-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
@@ -379,7 +380,23 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-
+                
+                {/* Action Buttons */}
+                <div className="mt-6 flex gap-3">
+                  <button
+                    onClick={() => setSelectedCourse(course)}
+                    className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
+                  >
+                    Syllabus
+                  </button>
+                
+                  <button
+                    onClick={() => handleEnrollClick(course.id)}
+                    className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
+                  >
+                    Enroll Now →
+                  </button>
+                </div>
             ))}
           </div>
 
