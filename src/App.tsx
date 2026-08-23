@@ -369,23 +369,6 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Actions bottom */}
-                <div className="mt-8 grid grid-cols-2 gap-3 pt-4 border-t border-slate-50">
-                  <button
-                    onClick={() => setSelectedCourse(course)}
-                    className="bg-slate-50 hover:bg-slate-100 border border-slate-100 text-slate-700 text-[11px] font-extrabold py-3 px-2 rounded-xl transition-colors flex items-center justify-center gap-1 cursor-pointer font-sans"
-                  >
-                    <Info className="h-3.5 w-3.5" />
-                    Syllabus
-                  </button>
-                  <button
-                    onClick={() => handleEnrollClick(course.id)}
-                    className="bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-[11px] font-extrabold py-3 px-2 rounded-xl transition-colors flex items-center justify-center gap-1 cursor-pointer font-sans shadow-sm shadow-indigo-600/10"
-                  >
-                    Enroll Now
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </button>
-                </div>
               </div>
             ))}
           </div>
