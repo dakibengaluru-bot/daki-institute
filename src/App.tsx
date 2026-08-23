@@ -360,15 +360,22 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Skills tags */}
-                  <div className="mt-4 pt-3 border-t border-slate-100">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">Key Skills:</span>
-                    <div className="flex flex-wrap gap-1">
-                      {course.skills.map((skill) => (
-                        <span key={skill} className="bg-indigo-50/60 text-indigo-700 text-[10px] font-semibold px-2 py-0.5 rounded">
-                          {skill}
-                        </span>
-                      ))}
+                    {/* Skills tags */}
+                    <div className="mt-4 pt-3 border-t border-slate-100">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
+                        Key Skills:
+                      </span>
+                    
+                      <div className="flex flex-wrap gap-1">
+                        {course.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="bg-indigo-50/60 text-indigo-700 text-[10px] font-semibold px-2 py-0.5 rounded"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
