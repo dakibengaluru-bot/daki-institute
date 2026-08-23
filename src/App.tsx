@@ -302,11 +302,6 @@ export default function App() {
       {/* Courses Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {COURSES
-    .filter(
-      course =>
-        course.id !== "kannada-communication" &&
-        course.id !== "government-school"
-    )
     .map(course => (
       <div
         key={course.id}
@@ -512,55 +507,6 @@ export default function App() {
                     {item.tool}
                   </div>
                   <p className="text-xs text-slate-600 font-sans leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= NEW SECTION: GOVERNMENT SCHOOL PROGRAM ================= */}
-      <section className="py-24 bg-slate-50 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
-          <div className="text-center space-y-3">
-            <span className="inline-block py-1 px-4 bg-emerald-50 text-emerald-700 text-xs font-bold tracking-widest uppercase rounded-full border border-emerald-100">
-              Social Initiative
-            </span>
-            <h3 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-indigo-950 tracking-tight">
-              Government School Student Development Program
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-500 font-sans max-w-xl mx-auto">
-              Special weekend and holiday programs focused on improving communication, confidence, digital literacy, and career awareness for government school students.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: 'English Speaking', desc: 'Learn conversational speaking vocabulary, greetings, and basic grammatical structures through fun games.', icon: 'MessageSquare' },
-              { title: 'Kannada Communication', desc: 'Enhance regional speaking confidence, vocabulary depth, and storytelling capabilities.', icon: 'Languages' },
-              { title: 'Public Speaking', desc: 'Overcome stage fright and practice presenting clear speeches in front of large audiences.', icon: 'GraduationCap' },
-              { title: 'Computer Fundamentals', desc: 'Acquire practical knowledge of keyboards, mouse navigation, and basic operating software.', icon: 'Terminal' },
-              { title: 'Personality Development', desc: 'Build self-respect, active listening skills, teamwork dynamics, and positive personal values.', icon: 'Users' },
-              { title: 'Career Guidance', desc: 'Examine future path structures and understand the skillsets needed for tech and enterprise careers.', icon: 'Compass' },
-              { title: 'Digital Skills', desc: 'Learn to search educational content on the internet, formulate lists, and type documents.', icon: 'FileText' },
-              { title: 'Basic AI Awareness', desc: 'Get introduced to how computers and AI assistants operate to solve everyday arithmetic queries.', icon: 'Cpu' }
-            ].map((item, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white border border-slate-100 p-6 rounded-2xl hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <div className="space-y-4">
-                  <div className="h-10 w-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center border border-emerald-100">
-                    {getLucideIcon(item.icon)}
-                  </div>
-                  <h4 className="font-display font-bold text-slate-900 text-sm">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs text-slate-500 font-sans leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
