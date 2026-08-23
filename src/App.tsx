@@ -302,10 +302,9 @@ export default function App() {
           {/* Courses Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {COURSES
-              .filter(
-                course =>
-                  course.title !== 'Kannada Communication Skills' &&
-                  course.title !== 'Government School Student Development Program'
+              .filter(course => 
+                course.id !== 'kannada-communication' &&
+                course.id !== 'government-school'
               )
               .map(course => (
                 <div>
