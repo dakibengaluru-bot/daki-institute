@@ -360,7 +360,7 @@ export default function App() {
                       </div>
                     </div>
                   )}
-
+                    
                     {/* Skills tags */}
                     <div className="mt-4 pt-3 border-t border-slate-100">
                       <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
@@ -378,27 +378,27 @@ export default function App() {
                         ))}
                       </div>
                     </div>
-                  </div>
-                </div>
-                
-                {/* Action Buttons */}
-                <div className="mt-6 flex gap-3">
-                  <button
-                    onClick={() => setSelectedCourse(course)}
-                    className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
-                  >
-                    Syllabus
-                  </button>
-                
-                  <button
-                    onClick={() => handleEnrollClick(course.id)}
-                    className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
-                  >
-                    Enroll Now →
-                  </button>
-                </div>
-            ))}
-          </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="mt-6 flex gap-3">
+                      <button
+                        onClick={() => setSelectedCourse(course)}
+                        className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
+                      >
+                        Syllabus
+                      </button>
+                    
+                      <button
+                        onClick={() => handleEnrollClick(course.id)}
+                        className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
+                      >
+                        Enroll Now →
+                      </button>
+                    </div>
+                    
+                          </div>
+                        ))}
+                      </div>
 
         </div>
       </section>
