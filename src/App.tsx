@@ -299,13 +299,15 @@ export default function App() {
             </p>
           </div>
 
-          {/* 9 Courses Grid */}
+          {/* Courses Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {COURSES.map(course => (
-              <div 
-                key={course.id} 
-                className="bg-white border border-slate-100 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group"
-              >
+            {COURSES
+              .filter(
+                course =>
+                  course.title !== 'Kannada Communication Skills' &&
+                  course.title !== 'Government School Student Development Program'
+              )
+              .map(course => (
                 <div>
                   {/* Icon Header */}
                   <div className="flex items-center justify-between mb-6">
