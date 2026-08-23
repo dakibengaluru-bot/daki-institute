@@ -379,30 +379,29 @@ export default function App() {
                       </div>
                     </div>
                     
-                    {/* Action Buttons */}
-                    <div className="mt-6 flex gap-3">
-                      <button
-                        onClick={() => setSelectedCourse(course)}
-                        className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
-                      >
-                        Syllabus
-                      </button>
-                    
-                      <button
-                        onClick={() => handleEnrollClick(course.id)}
-                        className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
-                      >
-                        Enroll Now →
-                      </button>
-                    </div>
-                    
-                          </div>
-                        ))}
-                      </div>
+                {/* Action Buttons */}
+                <div className="mt-6 flex gap-3">
+                  <button
+                    onClick={() => setSelectedCourse(course)}
+                    className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
+                  >
+                    Syllabus
+                  </button>
+                
+                  <button
+                    onClick={() => handleEnrollClick(course.id)}
+                    className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
+                  >
+                    Enroll Now →
+                  </button>
+                </div>
 
-        </div>
-      </section>
-
+      </div>
+    ))}
+  </div>
+</div>
+</section>
+                
       {/* ================= NEW SECTION: CAREER SUPPORT ================= */}
       <section className="py-24 bg-indigo-950 text-white relative">
         <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
