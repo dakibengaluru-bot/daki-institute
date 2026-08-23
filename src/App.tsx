@@ -299,106 +299,121 @@ export default function App() {
             </p>
           </div>
 
-          {/* Courses Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {COURSES
-              .filter(course =>
-                course.id !== 'kannada-communication' &&
-                course.id !== 'government-school'
-              )
-              .map(course => (
-                <div
-                  key={course.id}
-                  className="bg-white border border-slate-100 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group"
+      {/* Courses Grid */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {COURSES
+    .filter(
+      course =>
+        course.id !== "kannada-communication" &&
+        course.id !== "government-school"
+    )
+    .map(course => (
+      <div
+        key={course.id}
+        className="bg-white border border-slate-100 rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full group"
+      >
+        <div>
+          {/* Icon Header */}
+          <div className="flex items-center justify-between mb-6">
+            <div className="h-12 w-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+              {getLucideIcon(course.icon)}
+            </div>
+
+            <span className="text-[10px] bg-slate-50 text-slate-500 font-bold px-3 py-1 rounded-full border border-slate-100 font-sans uppercase">
+              {course.duration}
+            </span>
+          </div>
+
+          {/* Title */}
+          <h4 className="font-display font-black text-slate-900 text-lg group-hover:text-indigo-600 transition-colors">
+            {course.title}
+          </h4>
+
+          <p className="text-xs text-indigo-600 font-semibold mt-1 font-sans">
+            {course.subtitle}
+          </p>
+
+          {/* Description */}
+          <p className="text-xs text-slate-500 mt-4 leading-relaxed font-sans">
+            {course.description}
+          </p>
+
+          {/* Course Highlights */}
+          <div className="mt-5 space-y-2">
+            <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
+              Course Highlights:
+            </span>
+
+            <ul className="space-y-1.5">
+              {course.features.slice(0, 3).map((feat, idx) => (
+                <li
+                  key={idx}
+                  className="text-slate-600 text-[11px] font-sans flex items-start gap-1.5 leading-normal"
                 >
-                  <div>
-                    
-                  {/* Icon Header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="h-12 w-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
-                      {getLucideIcon(course.icon)}
-                    </div>
-                    <span className="text-[10px] bg-slate-50 text-slate-500 font-bold px-3 py-1 rounded-full border border-slate-100 font-sans uppercase">
-                      {course.duration}
-                    </span>
-                  </div>
-                  
-                  {/* Titles */}
-                  <h4 className="font-display font-black text-slate-900 text-lg group-hover:text-indigo-600 transition-colors">
-                    {course.title}
-                  </h4>
-                  <p className="text-xs text-indigo-600 font-semibold mt-1 font-sans">{course.subtitle}</p>
-                  
-                  {/* Description */}
-                  <p className="text-xs text-slate-500 mt-4 leading-relaxed font-sans">
-                    {course.description}
-                  </p>
+                  <span className="text-indigo-600 font-bold">✓</span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                  {/* Course Highlights (features) */}
-                  <div className="mt-5 space-y-2">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Course Highlights:</span>
-                    <ul className="space-y-1.5">
-                      {course.features.slice(0, 3).map((feat, idx) => (
-                        <li key={idx} className="text-slate-600 text-[11px] font-sans flex items-start gap-1.5 leading-normal">
-                          <span className="text-indigo-600 font-bold">✓</span>
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          {/* Tools Covered */}
+          {course.tools && course.tools.length > 0 && (
+            <div className="mt-4 pt-3 border-t border-slate-100">
+              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
+                Tools Covered:
+              </span>
 
-                  {/* Tools Covered */}
-                  {course.tools && course.tools.length > 0 && (
-                    <div className="mt-4 pt-3 border-t border-slate-100">
-                      <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">Tools Covered:</span>
-                      <div className="flex flex-wrap gap-1">
-                        {course.tools.map((tool) => (
-                          <span key={tool} className="bg-slate-100 text-slate-600 text-[9px] font-bold px-2 py-0.5 rounded uppercase font-mono">
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                    
-                    {/* Skills tags */}
-                    <div className="mt-4 pt-3 border-t border-slate-100">
-                      <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
-                        Key Skills:
-                      </span>
-                    
-                      <div className="flex flex-wrap gap-1">
-                        {course.skills.map((skill) => (
-                          <span
-                            key={skill}
-                            className="bg-indigo-50/60 text-indigo-700 text-[10px] font-semibold px-2 py-0.5 rounded"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                {/* Action Buttons */}
-                <div className="mt-6 flex gap-3">
-                  <button
-                    onClick={() => setSelectedCourse(course)}
-                    className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
+              <div className="flex flex-wrap gap-1">
+                {course.tools.map(tool => (
+                  <span
+                    key={tool}
+                    className="bg-slate-100 text-slate-600 text-[9px] font-bold px-2 py-0.5 rounded uppercase font-mono"
                   >
-                    Syllabus
-                  </button>
-                
-                  <button
-                    onClick={() => handleEnrollClick(course.id)}
-                    className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
-                  >
-                    Enroll Now →
-                  </button>
-                </div>
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
+          {/* Skills Tags */}
+          <div className="mt-4 pt-3 border-t border-slate-100">
+            <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
+              Key Skills:
+            </span>
+
+            <div className="flex flex-wrap gap-1">
+              {course.skills.map(skill => (
+                <span
+                  key={skill}
+                  className="bg-indigo-50/60 text-indigo-700 text-[10px] font-semibold px-2 py-0.5 rounded"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-6 flex gap-3">
+          <button
+            onClick={() => setSelectedCourse(course)}
+            className="flex-1 border border-slate-200 text-slate-700 text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 font-sans uppercase tracking-wide"
+          >
+            Syllabus
+          </button>
+
+          <button
+            onClick={() => handleEnrollClick(course.id)}
+            className="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition-all duration-300 font-sans uppercase tracking-wide"
+          >
+            Enroll Now →
+          </button>
+        </div>
       </div>
     ))}
-  </div>
 </div>
 </section>
                 
